@@ -1,0 +1,13 @@
+{
+  "name": "create-react-app-typescript-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "repository": "https://github.com/kdama/create-react-app-typescript-monorepo",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "yarn workspaces run build",
+    "test": "yarn workspaces run test --watchAll=false"
+  }
+}
