@@ -1,0 +1,20 @@
+name: check
+on: pull_request
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Node 18
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18
+      - name: install
+        run: |
+          yarn
+      - name: test
+        run: |
+          yarn test
+      - name: build
+        run: |
+          yarn build
